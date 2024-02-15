@@ -1,0 +1,245 @@
+
+.header__nav-list{
+    list-style-type: none;
+}
+
+.header{
+    height: 120px;
+    background-image: linear-gradient(to right, rgb(33, 211, 255), rgba(111, 226, 255,1));
+    color: #333;
+}
+.header__nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__nav-list{
+    padding-left: 0;
+}
+
+.header__nav-item{
+    position: relative;
+}
+
+.header__nav-item-has-qr:hover .header__qr{
+    display: block;
+}
+
+
+.header__nav-item,
+.header__nav-item-link{
+    display: inline-block;
+    font-size: 1.4rem;
+    color: var(--white-color);
+    text-decoration: none;
+    font-weight: 300;
+}
+
+.header__nav-item,
+.header__nav-item-link,
+.header__nav-icon-link{
+    display: inline-flex;
+    align-items: center;
+}
+
+.header__nav-icon-link:hover,
+.header__nav-item:hover,
+.header__nav-item-link:hover{
+    color: rgba(255,255,255,0.6);
+    cursor: pointer;
+}
+
+.header__nav-item + .header__nav-item{
+    margin-left: 10px;
+}
+
+.header__nav-item-bold{
+    font-weight: 400;
+}
+
+.header__nav-item-separate::after{
+    display: block;
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 16px;
+    background-color: rgba(242, 255, 255, 0.7);
+    right: -7px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.header__nav-icon-link{
+    color: var(--white-color);
+    text-decoration: none;
+    margin-left: 5px;
+}
+
+
+.header__nav-icon{
+    font-size: 1.8rem;
+}
+
+.header__nav--no-pointer{
+    cursor: text;
+    color: var(--white-color);
+}
+
+/* HEADER QR CODE */
+
+.header__qr{
+    width: 170px;
+    background: var(--white-color);
+    position: absolute;
+    left: 0;
+    top: 140%;
+    padding: 10px;
+    border-radius: 4px;
+    display: none;
+    animation: fadeIn ease 0.3s;
+}
+
+.header__qr::before {
+    position: absolute;
+    width: 100%;
+    height: 20px;
+    content: "";
+    display: block;
+    left: 0;
+    top: -8px;
+}
+
+.header__qr-img{
+    width: 100%;
+}
+.header__apps{
+    display: flex;
+}
+
+.header__download-appstore-img{
+    width: 40%;
+}
+
+.header__download-chplay-img{
+    width: 40%;
+    margin-left: 15px;
+}
+
+.header__download-appgallery-img{
+    width: 40%;
+    margin-top: 4px;
+}
+
+.header__app-links{
+    text-decoration: none;
+    margin-left: 9px;
+}
+
+/* Notifycation */
+
+.header__notify{
+    position: absolute;
+    top: 132%;
+    right: 0;
+    width: 400px;
+    background-color: rgb(255, 255, 255);
+    border: solid #D3D3D3 1px;
+    display: none;
+    animation: headerNotifyGrowth ease-in 0.2s;
+    transform-origin: calc(100% - 20px) top;
+}
+
+.header__notify::before {
+    position: absolute;
+    width: 100%;
+    height: 20px;
+    content: "";
+    display: block;
+    left: 0;
+    top: -8px;
+}
+
+@keyframes headerNotifyGrowth{
+    from{
+        opacity: 0;
+        transform: scale(0);
+    }
+    to{
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.header__nav-item-has-notify:hover .header__notify{
+    display: block;
+}
+
+.header__notify-header{
+    height: 5px;
+    background-color: var(--white-color);
+}
+
+.header__notify-header h4{
+    color: #9a9a9a;
+    width: 140px;
+    margin: 0;
+    line-height: 40px;
+}
+
+.header__notify-list{
+    margin-top: -8px;
+    padding-left: 0;
+}
+.header__notify-item{
+    list-style-type: none;
+    
+}
+
+.header__notify-item--seen:hover{
+    background-color: #f7f7f7;
+}
+
+.header__notify-item a{
+    display: flex;
+    text-decoration: none;
+
+}
+
+.header__notify-link{
+    width: 100%;
+    background-color: rgba(33, 211, 255, 0.1);
+}
+
+.header__header-info{
+    margin-left: 12px;
+}
+
+.header__notify-img{
+    margin-left: 12px;
+    width: 32px;
+    object-fit: contain;
+}
+
+.header__header-name{
+    color: var(--black-color);
+    margin: 6px 0;
+    font-size: 1.4rem;
+    line-height: 1.4rem;
+}
+
+.header__notify-description{
+    color: #9a9a9a;
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+    margin: 3px 0;
+}
+
+.header__notify-footer{
+    text-align: center;
+    padding: 16px 0 4px;
+}
+
+.header__notify-footer--all{
+    color: var(--black-color);
+    text-decoration: none;
+}
