@@ -40,3 +40,21 @@ html {
         opacity: 1;
     }
 }
+
+.modal_overlay{
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    display: flex;
+}
+
+.modal_body{
+    position: relative;
+    background-color: var(--white-color);
+    margin: auto;
+    border-radius: 5px;
+    z-index: 999;
+}
