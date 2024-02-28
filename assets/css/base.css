@@ -33,6 +33,16 @@ html {
 
 /* animation */
 
+@keyframes Growth {
+    from {
+        transform: scale(var(--growth-from));
+    }
+
+    to{
+        transform: scale(var(--growth-to));
+    }
+}
+
 @keyframes fadeIn {
     from {
         opacity: 0%;
@@ -42,6 +52,8 @@ html {
     }
 }
 
+
+
 .modal_overlay{
     position: fixed;
     top: 0;
@@ -50,12 +62,16 @@ html {
     left: 0;
     background-color: rgba(0, 0, 0, 0.4);
     display: flex;
+    animation: fadeIn linear 0.1s;
 }
 
 .modal_body{
+    --growth-from: 0.5;
+    --growth-to: 1;
     position: relative;
     margin: auto;
     z-index: 999;
+    animation: Growth linear 0.1s;
 }
 
 /* button style */
