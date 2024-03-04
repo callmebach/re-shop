@@ -4,6 +4,10 @@
     --text-color: #333;
     --primary-color: rgb(33, 211, 255);
     --border-color: #dbdbdb;
+
+    --header-height: 120px;
+    --header-nav: 38px;
+    --header-search: calc(var(--header-height) - var(--header-nav));
 }
 
 * {
