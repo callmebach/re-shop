@@ -148,6 +148,7 @@
     transform-origin: calc(100% - 20px) top;
     will-change: opacity, transform;
     cursor: default;
+    z-index: 99;
 }
 
 .header__notify::after{
