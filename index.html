@@ -125,7 +125,23 @@
                     </div>
 
                     <div class="header__search">
-                        <input type="text" class="header__search-input" placeholder="Tìm kiếm sản phẩm">
+
+                        <div class="header__search-input-wrap">
+                            <input type="text" class="header__search-input" placeholder="Tìm kiếm sản phẩm">
+                            <div class="header__search-history">
+                                <h3 class="header__search-history-heading">Lịch sử tìm kiếm</h3>
+                                <ul class="header__search-history-list">
+                                    <li class="header__search-history-item">
+                                        <a href="">Iphone 16 pro max</a>
+                                    </li>
+
+                                    <li class="header__search-history-item">
+                                        <a href="">Iphone 14 pro max</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>     
+
                         <div class="header__search-select">
                             <span class="header__search-select-label">Trong shop</span>
                             <i class="fa-solid fa-angle-down"></i>
@@ -147,9 +163,16 @@
                             <i class="fa-solid fa-magnifying-glass"></i>
                         </button>
                     </div>
-
+                        <!-- cart layout -->
                     <div class="header__cart-logo">
-                        <i class="fa-solid fa-cart-plus"></i>
+                        <div class="header__cart-icon">
+                            <i class="fa-solid fa-cart-plus"></i>
+                            
+                            <div class="header__cart-list header__cart-list-no-cart">
+                                <img src="https://taphoa.cz/static/media/cart-empty-img.8b677cb3.png" alt="" class="header__cart-list-no-cart-img">
+                                <span class="header__cart-list-no-cart-msg">Chưa có sản phẩm</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
